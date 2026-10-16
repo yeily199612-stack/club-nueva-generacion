@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d22">
+<meta name="description" content="Club Nueva Generación en Pereira: formación deportiva en voleibol, disciplina, compañerismo y vida saludable.">
+<title>Club Nueva Generación | Pereira</title>
+<style>
+:root{--bg:#100d14;--panel:#1c1723;--purple:#b78af5;--purple2:#8b50d7;--white:#fffaff;--muted:#c9c1d1;--line:#3a2b48}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(16,13,20,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.4px;line-height:1.05}
+.logo{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#160d20;font-size:24px}
+.brand span small{display:block;color:var(--purple);font-size:11px;letter-spacing:2px;margin-top:5px}
+nav{display:flex;align-items:center;gap:20px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--purple)}
+.menu{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:9px;padding:8px 11px;font-size:20px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 22px;font-weight:800;background:var(--purple);color:#1a1024;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#d2b4ff}
+.btn.secondary{background:transparent;color:var(--white);border:1px solid var(--purple)}
+.hero{min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 35%,#4e2c68 0,transparent 35%),linear-gradient(120deg,#130e1b 20%,#25152f 70%,#100d14)}
+.hero:after{content:"";position:absolute;right:-90px;bottom:-180px;width:570px;height:570px;border:2px solid #b78af52e;border-radius:50%;box-shadow:0 0 0 45px #b78af516,0 0 0 95px #b78af50c}
+.hero-inner{max-width:1150px;width:100%;margin:auto;padding:75px 22px;position:relative;z-index:1}
+.eyebrow{color:var(--purple);text-transform:uppercase;font-weight:800;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-2px;margin:18px 0;max-width:720px}
+h1 em{font-style:normal;color:var(--purple)}
+.hero p{font-size:18px;color:var(--muted);max-width:570px;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.volley-art{position:absolute;right:11%;top:22%;font-size:clamp(100px,18vw,210px);opacity:.15;filter:drop-shadow(0 20px 30px #000)}
+.strip{background:#f8f4fc;color:#1b1323;padding:24px 20px}
+.strip-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.strip strong{display:block;font-size:17px}.strip span{font-size:13px;color:#66576f}
+section{padding:78px 22px}
+.wrap{max-width:1100px;margin:auto}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:10px 0 15px}
+.section-head p,.muted{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.visual{min-height:330px;border-radius:24px;padding:28px;display:flex;align-items:end;background:linear-gradient(160deg,#6e4190,#251633 55%,#120e18);position:relative;overflow:hidden}
+.visual:before{content:"🏐";font-size:150px;position:absolute;top:22px;right:30px;opacity:.9;transform:rotate(-18deg)}
+.visual-card{position:relative;background:#100d14d9;border:1px solid #ffffff25;border-radius:16px;padding:18px;max-width:270px}
+.visual-card b{color:var(--purple);display:block;font-size:20px}
+.about-copy p{color:var(--muted)}
+.pill{display:inline-block;border:1px solid var(--line);padding:6px 11px;border-radius:999px;color:var(--purple);font-size:12px;font-weight:700;margin:4px 4px 0 0}
+.programs{background:#17121c}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:25px}
+.card .emoji{font-size:34px}.card h3{margin:12px 0 7px}.card p{color:var(--muted);font-size:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info{border-radius:20px;padding:30px;background:linear-gradient(140deg,#251832,#17121c);border:1px solid var(--line)}
+.info h3{color:var(--purple);font-size:24px;margin-top:0}
+.values{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.schedule{width:100%;border-collapse:collapse;margin-top:20px;border-radius:14px;overflow:hidden}
+.schedule th,.schedule td{text-align:left;padding:14px;border-bottom:1px solid var(--line)}
+.schedule th{color:var(--purple);background:#24192e}.schedule td{color:var(--muted);background:#19141f}
+.note{font-size:13px;color:#aa9fb5;margin-top:12px}
+.contact{background:linear-gradient(135deg,#2b1b39,#130f18)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+.contact-list{display:grid;gap:14px;margin-top:24px}
+.contact-item{display:flex;gap:13px;align-items:start}.contact-item .icon{font-size:23px;color:var(--purple)}
+form{display:grid;gap:13px;background:#100d14a8;border:1px solid #ffffff20;border-radius:20px;padding:24px}
+label{font-size:13px;color:var(--muted)}
+input,select,textarea{width:100%;margin-top:5px;background:#211a29;color:white;border:1px solid #4b3a59;border-radius:10px;padding:12px;font:inherit}
+textarea{min-height:95px;resize:vertical}
+form small{color:#a99db5}
+footer{padding:25px 22px;text-align:center;color:#a99db5;font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:800px){nav{display:none;position:absolute;top:70px;left:0;right:0;padding:18px 22px;background:#17121c;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.menu{display:block}nav.open{display:flex}.nav>.btn{display:none}.about-grid,.contact-grid,.two{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.hero{min-height:500px}.volley-art{right:2%;top:35%}.strip-inner{grid-template-columns:1fr}.strip-inner>div{padding:8px;border-bottom:1px solid #ded5e8}.strip-inner>div:last-child{border:0}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}section{padding:58px 18px}.hero-inner{padding:60px 18px}h1{letter-spacing:-1px}.visual{min-height:280px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="nav">
+  <a class="brand" href="#inicio" aria-label="Club Nueva Generación inicio"><span class="logo">🏐</span><span>CLUB NUEVA<small>GENERACIÓN · PEREIRA</small></span></a>
+  <button class="menu" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="navLinks"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#programas">Programas</a><a href="#mision">Misión y visión</a><a href="#horarios">Horarios</a><a href="#contacto">Contacto</a></nav>
+  <a class="btn" href="#contacto">¡Quiero entrenar!</a>
+ </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+ <div class="volley-art" aria-hidden="true">🏐</div>
+ <div class="hero-inner">
+  <div class="eyebrow">Deporte · Amistad · Crecimiento</div>
+  <h1>CRECEMOS<br>JUNTOS EN <em>LA CANCHA.</em></h1>
+  <p>Bienvenidos al Club Nueva Generación, un espacio en Pereira para aprender voleibol, fortalecer nuestras habilidades y disfrutar el deporte en equipo.</p>
+  <div class="hero-actions"><a class="btn" href="#programas">Conoce nuestros programas →</a><a class="btn secondary" href="#nosotros">Conócenos</a></div>
+ </div>
+</section>
+<div class="strip"><div class="strip-inner">
+ <div><strong>🏐 Entrenamiento de voleibol</strong><span>Aprendizaje paso a paso</span></div>
+ <div><strong>🤝 Trabajo en equipo</strong><span>Respeto y compañerismo</span></div>
+ <div><strong>💜 Crecimiento personal</strong><span>Confianza, disciplina y diversión</span></div>
+</div></div>
+<section id="nosotros"><div class="wrap about-grid">
+ <div class="visual"><div class="visual-card"><b>¡Somos Nueva Generación!</b><span>Un equipo que aprende, se esfuerza y celebra cada avance.</span></div></div>
+ <div class="about-copy"><div class="eyebrow">Quiénes somos</div><h2>Más que un club, <em style="color:var(--purple)">somos equipo.</em></h2>
+ <p>El Club Nueva Generación es un proyecto deportivo ubicado en Pereira, Risaralda, creado para que niños, jóvenes y personas interesadas puedan acercarse al voleibol en un ambiente positivo.</p>
+ <p>Queremos que cada integrante aprenda nuevas habilidades, haga amigos y descubra que el deporte también ayuda a desarrollar la responsabilidad, la confianza y el respeto por los demás.</p>
+ <span class="pill">Disciplina</span><span class="pill">Respeto</span><span class="pill">Compañerismo</span><span class="pill">Superación</span>
+ </div>
+</div></section>
+<section class="programs" id="programas"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">Nuestros programas</div><h2>Encuentra tu lugar en la cancha</h2><p>Entrenamientos pensados para aprender, practicar y mejorar de forma progresiva.</p></div>
+ <div class="cards">
+  <article class="card"><div class="emoji">🌱</div><h3>Iniciación al voleibol</h3><p>Para quienes están empezando. Practicamos movimientos básicos, coordinación y reglas sencillas.</p></article>
+  <article class="card"><div class="emoji">🏐</div><h3>Fundamentos técnicos</h3><p>Práctica de saque, recepción, voleo, antebrazos, desplazamientos y comunicación en equipo.</p></article>
+  <article class="card"><div class="emoji">🏆</div><h3>Juego en equipo</h3><p>Ejercicios grupales y partidos de práctica para aplicar lo aprendido con respeto y actitud positiva.</p></article>
+ </div>
+</div></section>
+<section id="mision"><div class="wrap"><div class="section-head"><div class="eyebrow">Lo que nos inspira</div><h2>Creemos en el poder del deporte</h2><p>Formamos deportistas y personas que aportan cosas buenas a su comunidad.</p></div>
+ <div class="two">
+  <article class="info"><h3>🎯 Nuestra misión</h3><p>Promover la práctica del voleibol en Pereira mediante entrenamientos accesibles y formativos que ayuden a desarrollar las habilidades deportivas, la disciplina, el respeto, el trabajo en equipo y los hábitos de vida saludable.</p></article>
+  <article class="info"><h3>✨ Nuestra visión</h3><p>Ser un club reconocido en Pereira por su compromiso con la formación deportiva y humana, creando oportunidades para que más personas aprendan voleibol, fortalezcan sus talentos y disfruten de un ambiente unido y respetuoso.</p></article>
+ </div>
+ <div class="values"><span class="pill">Respeto</span><span class="pill">Responsabilidad</span><span class="pill">Compromiso</span><span class="pill">Amistad</span><span class="pill">Perseverancia</span><span class="pill">Juego limpio</span></div>
+</div></section>
+<section class="programs" id="horarios"><div class="wrap">
+ <div class="section-head"><div class="eyebrow">Organiza tu semana</div><h2>Horarios de entrenamiento</h2><p>Estos son horarios de ejemplo para la propuesta del club; deben confirmarse antes de publicarlos como horarios oficiales.</p></div>
+ <table class="schedule"><thead><tr><th>Grupo</th><th>Días sugeridos</th><th>Horario sugerido</th></tr></thead><tbody>
+ <tr><td>Iniciación</td><td>Martes y jueves</td><td>4:00 p. m. – 5:00 p. m.</td></tr>
+ <tr><td>Fundamentos</td><td>Martes y jueves</td><td>5:00 p. m. – 6:30 p. m.</td></tr>
+ <tr><td>Práctica de equipo</td><td>Sábados</td><td>9:00 a. m. – 11:00 a. m.</td></tr>
+ </tbody></table><p class="note">Lugar, cupos, edades, costos y disponibilidad: por confirmar con la organización del club.</p>
+</div></section>
+<section class="contact" id="contacto"><div class="wrap contact-grid">
+ <div><div class="eyebrow">Hablemos</div><h2>¿Te gustaría unirte al equipo?</h2><p class="muted">Escríbenos para preguntar por los programas, horarios y próximos entrenamientos del Club Nueva Generación.</p>
+  <div class="contact-list"><div class="contact-item"><span class="icon">📍</span><div><b>Ubicación</b><br><span class="muted">Pereira, Risaralda, Colombia</span></div></div><div class="contact-item"><span class="icon">🏐</span><div><b>Deporte principal</b><br><span class="muted">Voleibol</span></div></div><div class="contact-item"><span class="icon">✉️</span><div><b>Inscripciones</b><br><span class="muted">Completa el formulario y prepara tu mensaje.</span></div></div></div>
+ </div>
+ <form id="contactForm"><h3 style="margin:0">Formulario de interés</h3>
+  <label>Nombre<input name="nombre" required placeholder="Tu nombre"></label>
+  <label>Correo electrónico<input name="correo" type="email" required placeholder="tunombre@correo.com"></label>
+  <label>Programa que te interesa<select name="programa"><option>Iniciación al voleibol</option><option>Fundamentos técnicos</option><option>Juego en equipo</option><option>Quiero más información</option></select></label>
+  <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos qué te gustaría saber"></textarea></label>
+  <button class="btn" type="submit">Preparar mensaje</button>
+  <small>Este formulario es una demostración: no envía ni guarda tus datos. Al pulsar el botón podrás abrir un borrador de correo si tu dispositivo tiene una aplicación configurada.</small>
+ </form>
+</div></section>
+</main>
+<footer>© <span id="year"></span> Club Nueva Generación · Pereira, Colombia<br>Formamos equipo dentro y fuera de la cancha. 💜</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const subject=encodeURIComponent('Información - Club Nueva Generación');const body=encodeURIComponent(`Hola, soy ${f.get('nombre')}.\nCorreo: ${f.get('correo')}\nPrograma de interés: ${f.get('programa')}\nMensaje: ${f.get('mensaje')||'Quisiera recibir más información.'}`);alert('Se abrirá un borrador de correo. Para recibir mensajes automáticamente, la página debe conectarse a un servicio de formularios.');window.location.href=`mailto:?subject=${subject}&body=${body}`;});
+</script>
+</body>
+</html>
